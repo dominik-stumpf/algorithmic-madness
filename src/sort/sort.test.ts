@@ -1,5 +1,5 @@
+import { describe, expect, it } from 'bun:test';
 import { bubbleSort } from './bubble-sort';
-import { describe, it, expect } from 'bun:test';
 
 describe('bubbleSort', () => {
   it('should correctly sort an array of positive numbers in ascending order', () => {
