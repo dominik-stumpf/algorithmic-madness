@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'bun:test';
-import { binarySearchRecursive, binarySearchWhileLoop } from './binarySearch';
+import { binarySearchRecursive, binarySearchWhileLoop } from './binary-search';
 
 const searchAlgorithms = [binarySearchRecursive, binarySearchWhileLoop];
 
