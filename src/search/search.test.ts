@@ -43,6 +43,18 @@ for (let i = 0; i < searchAlgorithms.length; i += 1) {
       expect(searchAlgorithm(sortedArray, target)).toBe(-1);
     });
 
+    it('should find last element', () => {
+      const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const target = 10;
+      expect(searchAlgorithm(sortedArray, target)).toBe(9);
+    });
+
+    it('should find first element', () => {
+      const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const target = 1;
+      expect(searchAlgorithm(sortedArray, target)).toBe(0);
+    });
+
     it('shoud find element, even if there are multiple instances of it', () => {
       const sortedArray = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       const target = 2;
