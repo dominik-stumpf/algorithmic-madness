@@ -46,7 +46,8 @@ for (let i = 0; i < searchAlgorithms.length; i += 1) {
     it('shoud find element, even if there are multiple instances of it', () => {
       const sortedArray = [1, 2, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       const target = 2;
-      expect(searchAlgorithm(sortedArray, target)).toBe(2);
+      const index = searchAlgorithm(sortedArray, target);
+      expect(sortedArray[index]).toBe(target);
     });
   });
 }

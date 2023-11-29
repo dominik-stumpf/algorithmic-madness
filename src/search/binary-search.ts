@@ -7,7 +7,7 @@ export function binarySearchRecursive(
   }
 
   let lowPointer = 0;
-  let highPointer = sortedArray.length - 1;
+  let highPointer = sortedArray.length;
 
   function recursion() {
     const mid = Math.floor((lowPointer + highPointer) / 2);
@@ -38,21 +38,21 @@ export function binarySearchWhileLoop(
   target: number,
 ): number {
   let lowPointer = 0;
-  let highPointer = sortedArray.length - 1;
+  let highPointer = sortedArray.length;
 
-  while (lowPointer <= highPointer) {
-    const mid = Math.floor((lowPointer + highPointer) / 2);
+  do {
+    const mid = Math.floor(lowPointer + (highPointer - lowPointer) / 2);
     const midValue = sortedArray[mid];
 
-    if (midValue === target) {
+    if (target === midValue) {
       return mid;
     }
-    if (midValue < target) {
-      lowPointer = mid + 1;
+    if (target < midValue) {
+      highPointer = mid;
     } else {
-      highPointer = mid - 1;
+      lowPointer = mid + 1;
     }
-  }
+  } while (lowPointer < highPointer);
 
   return -1;
 }
